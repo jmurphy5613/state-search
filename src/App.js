@@ -10,12 +10,7 @@ class App extends Component {
     }
   }
 
-  componentDidMount(){
-    fetch('./test.json')
-    .then(response => response.json())
-    .then(response => this.setState({states: response}));
 
-  }
 
   render() {
     <div className="App">
