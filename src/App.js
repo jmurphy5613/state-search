@@ -1,12 +1,18 @@
 import './App.css';
-import React from 'react';
+import React, { Component } from 'react';
 
-function App() {
-  return (
+
+class App extends Component {
+
+  componentDidMount(){
+    fetch()
+  }
+
+  render() {
     <div className="App">
-
+      
     </div>
-  );
+  }
 }
 
 export default App;
