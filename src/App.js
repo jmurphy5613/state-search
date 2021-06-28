@@ -3,9 +3,18 @@ import React, { Component } from 'react';
 
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      states: []
+    }
+  }
 
   componentDidMount(){
-    fetch()
+    fetch('./test.json')
+    .then(response => response.json())
+    .then(response => this.setState({states: response}));
+
   }
 
   render() {
