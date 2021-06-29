@@ -1,5 +1,6 @@
 import './App.css';
 import React, { Component } from 'react';
+import { CardList } from './components/card-list/card-list.component';
 
 
 class App extends Component {
@@ -13,14 +14,16 @@ class App extends Component {
   componentDidMount(){
     fetch('./test.json')
     .then(response => response.json())
-    .then(response => this.setState({states: response}));
+    .then(states => this.setState({states: states}));
 
   }
 
   render() {
-    <div className="App">
-      
-    </div>
+    return (
+      <div className="App">
+        {console.log(this.state.states)}
+      </div>
+    )
   }
 }
 
